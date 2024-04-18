@@ -1,0 +1,49 @@
+key = {
+    941964000: 214323,
+    995530001: 896754,
+    901770002: 397511
+}
+# print(key.pop(932608005))
+# print(key)
+
+data = {
+    214323: {
+        'name': 'Jasur',
+        'phone': '941964000',
+        "isactive": True,
+        'address': {
+            'country': 'UZB',
+            'city': 'Toshkent',
+        }
+    },
+    896754: {
+        'name': 'Diyor',
+        'phone': '995530001',
+        "isactive": True,
+        'address': {
+            'country': 'UZB',
+            'city': 'Toshkent',
+        }
+    },
+    397511: {
+        'name': 'Dostmuhammad',
+        'phone': '901770002',
+        "isactive": False,
+        'address': {
+            'country': 'UZB',
+            'city': 'Toshkent',
+        }
+    },
+}
+
+phone = int(input('Enter PhoneNumber: +998 '))
+ID = key.get(phone)
+if ID is None:
+    print("not found")
+else:
+    print(f'User ID: <{ID}>')
+    getData = int(input('Enter user ID: '))
+    if getData == ID:
+        print(data.get(getData))
+    else:
+        print('id not found')
